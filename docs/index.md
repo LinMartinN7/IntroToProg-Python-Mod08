@@ -1,37 +1,30 @@
-## Welcome to GitHub Pages
+# Working with Classes
 
-You can use the [editor on GitHub](https://github.com/LinMartinN7/IntroToProg-Python-Mod08/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
+## Introduction
+For Assignment 08, our class was tasked with applying our knowledge of working with classes to a script that was provided to us by Professor Root. In this script, we were exposed to working with a file that had already been created and having to work within the parameters established by that script. In this document, I will discuss how I worked on this assignment and completed each section.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Updating the File
+Due to script file for Assignment 8 being one that was already made for us to use, I immediately went into the header of the file and added my information to the change log. I continued to update the header as I worked on the file, documenting the progress I made for other programmers to see.
 
-### Markdown
+[[INSERT SCREENSHOT]]
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+_**Figure __: Header in Assignment08_LMartin.py file.**_
 
-```markdown
-Syntax highlighted code block
+## Preparing the Script
+The first part of the script I needed to work with was setting up the classes for the data portion of the script. Classes are a methodology that allow programmers to group data and functions together. This is typically applied to environments that focus on working with processing data.
 
-# Header 1
-## Header 2
-### Header 3
+[[INSERT SCREENSHOT OF DATA CLASS CODE]]
 
-- Bulleted
-- List
+_**Figure __: Functions in the Data section of the script.**_
 
-1. Numbered
-2. List
+Next, I proceeded to the processing section of the script. Classes were used again in this section but were applied to the code handling the processing of the data.
 
-**Bold** and _Italic_ and `Code` text
+[[INSERT SCREENSHOT OF PROCESSING CLASS CODE]]
 
-[Link](url) and ![Image](src)
-```
+_**Figure __: Functions in the Processing section of the script.**_
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+Lastly, I added the script into the presentation section. This section of the script handled how the data was going to be visibly shown to the user. This included the menu of options the user needed to interact with, along with the other visible text on the screen.
 
-### Jekyll Themes
+[[INSERT SCREENSHOT OF PRESENTATION CODE]]
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/LinMartinN7/IntroToProg-Python-Mod08/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+_**Figure __: Insert text here.**_
