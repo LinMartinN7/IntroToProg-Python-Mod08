@@ -1,5 +1,3 @@
-# Working with Classes
-
 ## Introduction
 For Assignment 08, our class was tasked with applying our knowledge of working with classes to a script that was provided to us by Professor Root. In this script, we were exposed to working with a file that had already been created and having to work within the parameters established by that script. In this document, I will discuss how I worked on this assignment and completed each section.
 
