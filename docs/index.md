@@ -2,27 +2,78 @@
 For Assignment 08, our class was tasked with applying our knowledge of working with classes to a script that was provided to us by Professor Root. In this script, we were exposed to working with a file that had already been created and having to work within the parameters established by that script. In this document, I will discuss how I worked on this assignment and completed each section.
 
 ## Updating the File
-Due to script file for Assignment 8 being one that was already made for us to use, I immediately went into the header of the file and added my information to the change log. I continued to update the header as I worked on the file, documenting the progress I made for other programmers to see.
+Due to the script file for Assignment 8 being one that was already made for us to use, I immediately went into the header of the file and added my information to the change log. I continued to update the header as I worked on the file, documenting the progress I made for other programmers to see. I also elected to add numbers to the existing _**TODO**_ tasks and _**TODO**_ tasks I added so I could more thoroughly document what I had worked on.
 
-[[INSERT SCREENSHOT]]
-
-_**Figure __: Header in Assignment08_LMartin.py file.**_
+![Figure01](https://user-images.githubusercontent.com/84411887/132266756-24ed71c1-af27-4819-a4e2-eddd1f8b7f47.JPG)
 
 ## Preparing the Script
-The first part of the script I needed to work with was setting up the classes for the data portion of the script. Classes are a methodology that allow programmers to group data and functions together. This is typically applied to environments that focus on working with processing data.
+The first part of the script I needed to work with was setting up the classes for the data portion of the script. Classes are a methodology that allow programmers to group data and functions together. This is typically applied to environments that focus on working with processing data. Because this file was working with product data, I went ahead and set up the class with the four main sections the scripts include: Fields, Constructors, Properties, and Methods.
 
-[[INSERT SCREENSHOT OF DATA CLASS CODE]]
+![Figure02](https://user-images.githubusercontent.com/84411887/132266772-25327b78-f0d3-485f-a5fb-08bd74d244ee.JPG)
 
-_**Figure __: Functions in the Data section of the script.**_
+Next, I proceeded to the processing section of the script. Classes were used again in this area with each section being broken up between the two functions being performed to process the data. This included reading data from a file and saving data to a file. 
 
-Next, I proceeded to the processing section of the script. Classes were used again in this section but were applied to the code handling the processing of the data.
+![Figure03](https://user-images.githubusercontent.com/84411887/132266783-31976399-358a-43ee-92d5-971ea9329d73.JPG)
 
-[[INSERT SCREENSHOT OF PROCESSING CLASS CODE]]
+The next step in the script was to add code into the presentation section. This section of the script handled what the user was going to see in the actual program once it was running. This included the menu of options the user needed to interact with, obtaining the user’s selection from the menu, displaying current products, pressing enter to continue within the script, selecting yes or no for saving the file, and adding new products.
 
-_**Figure __: Functions in the Processing section of the script.**_
+![Figure04](https://user-images.githubusercontent.com/84411887/132266809-d521ca52-c2e3-47a3-955f-2ca7641a087a.JPG)
 
-Lastly, I added the script into the presentation section. This section of the script handled how the data was going to be visibly shown to the user. This included the menu of options the user needed to interact with, along with the other visible text on the screen.
+Lastly, the main body of the script needed to be completed. This section was what would have the script for running the user’s commands and was critical for the script to work correctly. I added options for each selection of the menu, along with a section of code that would appear once the script was launched letting the user know the database was being opened. I ended this section with an exception handling clause to generate an error if something went wrong with the script.
 
-[[INSERT SCREENSHOT OF PRESENTATION CODE]]
+![Figure05](https://user-images.githubusercontent.com/84411887/132266821-e51e2c9e-86af-4779-85be-6315d913d199.JPG)
 
-_**Figure __: Insert text here.**_
+## Troubleshooting the Script
+Once the script was written, I ran it in PyCharm to see how well it worked. I ran into my usual set of errors which were usually missing punctuation errors or typos. I was able to successfully fix multiple errors I discovered, including the sections to display the current products and adding new products to the script. 
+
+![Figure06](https://user-images.githubusercontent.com/84411887/132266837-ea1a2ea9-fffe-4c8e-909d-fb22e0184e3f.JPG)
+
+When it came to test the saving data to a file, I encountered errors with the _**select_yes_or_no()**_ function. Because this was an existing script we were tasked with modifying, I did my best to utilize the existing structure for storing functions and began to review the code I had added to the script.
+
+![Figure07](https://user-images.githubusercontent.com/84411887/132266886-f378f04e-a5d0-41ab-b62e-770fae7d9fa8.JPG)
+
+There were two areas of the script that handled the _**select_yes_or_no()**_ function. I reviewed the code and added a choice for the _**“n”**_ selection along with the _**“y”**_ selection. This resulted in the same error being generated by the script once I ran it. 
+
+![Figure08](https://user-images.githubusercontent.com/84411887/132266924-ef97f343-a97e-48ac-9604-0f56979b7320.JPG)
+
+I attempted to troubleshoot this error for quite some time and continued to make no headway. Because I was unable to resolve this issue by modifying the script, I elected to remove the choice to confirm whether the user wanted to save the file. I went back into the stored functions and removed my _**select_yes_or_no()**_ clause and altered the script to automatically save the new data to the text file. I re-ran the script to test whether my new code was working successfully. 
+
+![Figure09](https://user-images.githubusercontent.com/84411887/132266935-236f0083-899f-4b2d-b2da-03a151e8928c.JPG)
+
+At this point, I re-ran the script to test how well it was working. I was able to add a new product with no errors and the script closed correctly. I even tested my error handling by inputting a wrong command, which it recognized.
+
+![Figure10](https://user-images.githubusercontent.com/84411887/132266945-44335453-824d-4d97-8483-c2e2265ed480.JPG)
+
+## Testing the Script
+Now that the errors were resolved with the script, I fully tested the script in PyCharm. I was able to successfully add items to the text file and verified that the information was saving correctly. I proceeded with testing the script in Windows Command Prompt. I immediately ran across an error with the script, which forced me to go back into PyCharm to figure out what I had done. 
+
+![Figure11](https://user-images.githubusercontent.com/84411887/132266958-46b2e378-9295-447b-907a-1cefab54b09d.JPG)
+
+After deleting an extra _**objFile.close()**_ clause in the _**read_data_from_file**_ function, I re-ran the script and the program opened correctly in Command Prompt. I tested the script to ensure it was working by viewing the existing data, which was empty due to the script re-directing to the local directory. 
+
+I proceeded with my testing and added a few items to the product list. After verifying that the data was captured correctly within the program, I used the option to save the data to a text file. I located the file in my local drive and opened it, confirming that the products and prices matched what had been inputted through Command Prompt (Figure 12). With this working, I exited the program to verify it was working, and Command Prompt exited the script with no issue. Now that the script was finished, I could proceed with the next steps of Assignment 08.
+
+![Figure12](https://user-images.githubusercontent.com/84411887/132266972-4cf21740-f1a2-4f31-9233-e04992f42f9d.JPG)
+
+## Lessons Learned Paper
+Due to the changes to our Final Assignment, I had to add one more document to Assignment 08’s tasks, the Lessons Learned Paper. This paper was to serve as our final write-up for the course, covering what we learned throughout the duration of the term. I wrote this paper in a separate file so it would be uploaded with my other assignment files on GitHub and through Course Canvas.
+
+![Figure13](https://user-images.githubusercontent.com/84411887/132266982-e76366a8-94e2-4ba7-b0dc-63ac6b7f0f4f.JPG)
+
+## Using GitHub Desktop
+For Assignment 08, our class was tasked with creating a new GitHub repository to store our files for the assignment. However, for this week’s assignment we needed to use GitHub Desktop instead of the GitHub website. Installing GitHub Desktop from the GitHub website was fairly straightforward, and within minutes I had the program open on my computer and was creating a new repository for Assignment 08.
+
+![Figure14](https://user-images.githubusercontent.com/84411887/132266999-6e251192-f7cd-44a2-b2ad-26d2c8ebf718.JPG)
+
+I copied my documents for Assignment 08 and placed them into the created folder on my PC by GitHub Desktop. This allowed them to be uploaded onto the site once I was ready to publish them.
+
+![Figure15](https://user-images.githubusercontent.com/84411887/132267007-aac616bc-345d-49ec-b723-abf2ce32b6b9.JPG)
+
+To verify that the files properly uploaded onto the GitHub website, I accessed my repository through the web. After verifying that the files had uploaded, I knew I wanted to go ahead and create a GitHub site with my Assignment 08 paper. I uploaded part of the paper to verify that it was working correctly as the main site (Figure 16). After finishing the write-up, I went back into the GitHub site and added the remaining sections of the paper, along with screenshots so the site would be complete.
+
+![Figure16](https://user-images.githubusercontent.com/84411887/132267022-e3997db9-cebf-43f0-9fe3-520427a1c244.JPG)
+
+## Summary
+I greatly appreciated Professor Root changing our final project to be Assignment 08. It allowed me to have more time to work with the script file, which ended up helping me grasp how to use functions and classes more thoroughly. I struggled with Assignment 06, so being able to re-visit the subject matter with extended time was greatly beneficial. I still don’t think I have quite mastered using functions as well as I would like, but I am quite proud of the progress I was able to make on this assignment. I struggled with certain sections and ended up having to change my plan for the select_yes_or_no() function which was frustrating, but I was able to deliver a working product even with the change.
+
+Even though creating a GitHub page was optional for this assignment, I decided to create one for the assignment. I felt it was important to continue using GitHub and the syntax for creating sites is easy for me to comprehend and is simpler than HTML. While creating GitHub sites does take an additional bit of time, due to having to save each screenshot as a photo on my PC for uploading and re-formatting my text, the final product is quite nice to look at. I have shared the sites I have created with friends and family, which helps them gain a sense of what it is I spend so many hours working on each week after work. GitHub is a great option for sharing work and showing my progress as a developer.
